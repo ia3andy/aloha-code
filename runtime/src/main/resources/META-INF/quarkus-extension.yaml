@@ -1,0 +1,15 @@
+name: Aloha Code
+#description: Aloha Code ...
+metadata:
+#  keywords:
+#    - aloha-code
+#  guide: ...
+#  categories:
+#    - "miscellaneous"
+#  status: "preview"
+  codestart:
+    name: "aloha-code"
+    languages:
+      - "java"
+      - "kotlin"
+    artifact: "io.quarkus:aloha-code:codestarts:jar:1.0.0-SNAPSHOT"

@@ -1,0 +1,4 @@
+org/acme/aloha/code/deployment/AlohaCodeProcessor$$accessor.class
+META-INF/quarkus-javadoc.properties
+org/acme/aloha/code/deployment/AlohaCodeProcessor.class
+META-INF/quarkus-build-steps.list
