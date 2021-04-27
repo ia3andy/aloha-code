@@ -5,8 +5,11 @@ import static io.quarkus.devtools.codestarts.quarkus.QuarkusCodestartCatalog.Lan
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
 
+import io.quarkus.devtools.project.extensions.Extensions;
 import io.quarkus.devtools.testing.codestarts.QuarkusCodestartTest;
 import io.quarkus.maven.ArtifactCoords;
+import io.quarkus.maven.ArtifactKey;
+import io.quarkus.registry.ExtensionCatalogResolver;
 import org.junit.jupiter.api.Test;
 
 import io.quarkus.test.junit.QuarkusTest;
@@ -19,8 +22,8 @@ public class AlohaCodeCodestartIT {
 
     @RegisterExtension
     public static QuarkusCodestartTest codestartTest = QuarkusCodestartTest.builder()
-            .codestarts("aloha-code")
-            .artifacts(Collections.singleton("org.acme:aloha-code:codestarts:jar:1.0.0-SNAPSHOT"))
+            .standaloneExtensionCatalog()
+            .extension(ArtifactKey.fromString("org.acme:aloha-code"))
             .languages(JAVA, KOTLIN)
             .build();
 
@@ -31,8 +34,7 @@ public class AlohaCodeCodestartIT {
     }
 
     @Test
-    @EnabledIfSystemProperty(named = "build-projects", matches = "true")
-    void buildAllProjectsForLocalUse() throws Throwable {
+    void testBuild() throws Throwable {
         codestartTest.buildAllProjects();
     }
 }
