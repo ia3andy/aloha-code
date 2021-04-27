@@ -1,4 +1,4 @@
-# Example "Aloha Extension" with a Codestart
+# Example Quarkus Extension with a Codestart
 
 - Codestarts location: [./runtime/src/main/codestarts/](./runtime/src/main/codestarts/)
 - Change the pom to produce the codestart artifact: [./runtime/pom.xml#L29-L48](./runtime/pom.xml#L29-L48)
