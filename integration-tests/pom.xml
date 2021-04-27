@@ -28,6 +28,7 @@
       <groupId>io.quarkus</groupId>
       <artifactId>quarkus-devtools-testing</artifactId>
       <version>${quarkus.version}</version>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>io.rest-assured</groupId>
@@ -64,6 +65,9 @@
             <artifactId>maven-surefire-plugin</artifactId>
             <configuration>
               <skipTests>${native.surefire.skip}</skipTests>
+              <systemPropertyVariables>
+                <project.version>${project.version}</project.version>
+              </systemPropertyVariables>
             </configuration>
           </plugin>
           <plugin>
@@ -78,6 +82,7 @@
                   <systemPropertyVariables>
                     <native.image.path>${project.build.directory}/${project.build.finalName}-runner</native.image.path>
                     <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
+                    <project.version>${project.version}</project.version>
                     <maven.home>${maven.home}</maven.home>
                   </systemPropertyVariables>
                 </configuration>
