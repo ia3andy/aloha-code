@@ -36,11 +36,12 @@
               <goal>jar</goal>
             </goals>
             <configuration>
-              <classesDirectory>${project.basedir}/src/main/codestarts</classesDirectory>
+              <classesDirectory>${project.basedir}/src/main</classesDirectory>
               <includes>
-                <include>**</include>
+                <include>codestarts/**</include>
               </includes>
               <classifier>codestarts</classifier>
+              <skipIfEmpty>true</skipIfEmpty>
             </configuration>
           </execution>
         </executions>
@@ -57,7 +58,6 @@
             </goals>
             <configuration>
               <deployment>${project.groupId}:${project.artifactId}-deployment:${project.version}</deployment>
-              <skipCodestartValidation>true</skipCodestartValidation>
             </configuration>
           </execution>
         </executions>

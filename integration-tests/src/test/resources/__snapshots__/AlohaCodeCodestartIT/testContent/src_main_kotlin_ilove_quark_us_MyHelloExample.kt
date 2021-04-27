@@ -1,4 +1,4 @@
-package org.acme.example
+package ilove.quark.us
 
 import javax.enterprise.context.ApplicationScoped
 
