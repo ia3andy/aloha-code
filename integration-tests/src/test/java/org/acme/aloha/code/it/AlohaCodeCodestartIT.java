@@ -23,10 +23,9 @@ public class AlohaCodeCodestartIT {
     @RegisterExtension
     public static QuarkusCodestartTest codestartTest = QuarkusCodestartTest.builder()
             .standaloneExtensionCatalog()
-            .extension(ArtifactKey.fromString("org.acme:aloha-code"))
+            .extension(ArtifactCoords.fromString("org.acme:aloha-code:1.0.0-SNAPSHOT"))
             .languages(JAVA, KOTLIN)
             .build();
-
 
     @Test
     void testContent() throws Throwable {

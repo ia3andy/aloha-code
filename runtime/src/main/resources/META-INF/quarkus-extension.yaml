@@ -12,4 +12,4 @@ metadata:
     languages:
       - "java"
       - "kotlin"
-    artifact: "org.acme:aloha-code:codestarts:jar"
+    artifact: "org.acme:aloha-code:codestarts:jar:${project.version}"
