@@ -1,22 +1,12 @@
 package org.acme.aloha.code.it;
 
-import static io.quarkus.devtools.codestarts.quarkus.QuarkusCodestartCatalog.Language.JAVA;
-import static io.quarkus.devtools.codestarts.quarkus.QuarkusCodestartCatalog.Language.KOTLIN;
-import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.is;
-
-import io.quarkus.devtools.project.extensions.Extensions;
 import io.quarkus.devtools.testing.codestarts.QuarkusCodestartTest;
 import io.quarkus.maven.ArtifactCoords;
-import io.quarkus.maven.ArtifactKey;
-import io.quarkus.registry.ExtensionCatalogResolver;
 import org.junit.jupiter.api.Test;
-
-import io.quarkus.test.junit.QuarkusTest;
-import org.junit.jupiter.api.condition.EnabledIfSystemProperty;
 import org.junit.jupiter.api.extension.RegisterExtension;
 
-import java.util.Collections;
+import static io.quarkus.devtools.codestarts.quarkus.QuarkusCodestartCatalog.Language.JAVA;
+import static io.quarkus.devtools.codestarts.quarkus.QuarkusCodestartCatalog.Language.KOTLIN;
 
 public class AlohaCodeCodestartIT {
 
